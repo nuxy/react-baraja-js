@@ -25,22 +25,55 @@ class BarajaJS extends React.Component {
     );
   }
 
+  componentDidUpdate(prevProps) {
+    if (!Object.is(this.props.fan, prevProps.fan)) {
+      this.baraja.fan(this.props.fan);
+    }
+
+    if (this.props.add !== prevProps.add) {
+      this.baraja.add(this.props.add);
+    }
+
+    if (this.props.close !== prevProps.close) {
+      this.baraja.close();
+    }
+
+    if (this.props.last !== prevProps.last) {
+      this.baraja.last();
+    }
+
+    if (this.props.next !== prevProps.next) {
+      this.baraja.next();
+    }
+  }
+
   render() {
     return (
       <ul id={this.props.id} className="baraja-container" ref="wrapper">
-        {this.props.children.map(Child => <li>{Child}</li>)}
+        {this.props.children.map((Child, index) => {
+          return <li key={index}>{Child}</li>;
+        })}
       </ul>
     );
   }
 };
 
 BarajaJS.defaultProps = {
-  id: 'baraja-js'
+  id: 'baraja-js',
+  fan: {},
+  close: false,
+  last: false,
+  next: false
 };
 
 BarajaJS.propTypes = {
   id: PropTypes.string,
-  options: PropTypes.object
+  options: PropTypes.object,
+  fan: PropTypes.object,
+  add: PropTypes.string,
+  close: PropTypes.bool,
+  last: PropTypes.bool,
+  next: PropTypes.bool
 };
 
 export default BarajaJS;

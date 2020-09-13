@@ -68,19 +68,379 @@ const cards = [
 /* eslint-enable max-len */
 
 class Demo extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      add: null,
+      fan: {},
+      last: false,
+      next: false,
+      close: false
+    };
+  }
+
+  // Fan right
+  fanClick() {
+    this.setState({
+      fan: {
+        direction: 'right',
+        easing: 'ease-out',
+        origin: {
+          x: 25,
+          y: 100
+        },
+        speed: 500,
+        range: 90,
+        center: true
+      }
+    });
+  }
+
+  // Fan left
+  fan2Click() {
+    this.setState({
+      fan: {
+        direction: 'left',
+        easing: 'ease-out',
+        origin: {
+          x: 75,
+          y: 100
+        },
+        speed: 500,
+        range: 90,
+        center: true
+      }
+    });
+  }
+
+  // Fan right (asym.)
+  fan3Click() {
+    this.setState({
+      fan: {
+        direction: 'right',
+        easing: 'ease-out',
+        origin: {
+          minX: 20,
+          maxX: 80,
+          y: 100
+        },
+        speed: 500,
+        range: 90,
+        translation: 60,
+        center: true
+      }
+    });
+  }
+
+  // Fan left (asym.)
+  fan4Click() {
+    this.setState({
+      fan: {
+        direction: 'left',
+        easing: 'ease-out',
+        origin: {
+          minX: 20,
+          maxX: 80,
+          y: 100
+        },
+        speed: 500,
+        range: 90,
+        translation: 60,
+        center: true
+      }
+    });
+  }
+
+  // Rotated spread (horizontal)
+  fan5Click() {
+    this.setState({
+      fan: {
+        direction: 'right',
+        easing: 'ease-out',
+        origin: {
+          x: 50, y: 200
+        },
+        speed: 500,
+        range: 100,
+        center: true
+      }
+    });
+  }
+
+  // Rotated spread (vertical)
+  fan6Click() {
+    this.setState({
+      fan: {
+        direction: 'left',
+        easing: 'ease-out',
+        origin: {
+          x: 200,
+          y: 50
+        },
+        speed: 500,
+        range: 80,
+        center: true
+      }
+    });
+  }
+
+  // Linear spread right
+  fan7Click() {
+    this.setState({
+      fan: {
+        direction: 'right',
+        easing: 'ease-out',
+        origin: {
+          x: 50,
+          y: 200
+        },
+        speed: 500,
+        range: 20,
+        translation: 300,
+        center: false
+      }
+    });
+  }
+
+  // Linear spread left
+  fan8Click() {
+    this.setState({
+      fan: {
+        direction: 'left',
+        easing: 'ease-out',
+        origin: {
+          x: 50,
+          y: 200
+        },
+        speed: 500,
+        range: 20,
+        translation : 300,
+        center: false
+      }
+    });
+  }
+
+  // Linear spread right (irregular)
+  fan9Click() {
+    this.setState({
+      fan: {
+        direction: 'right',
+        easing: 'ease-out',
+        origin: {
+          x: 50,
+          y: 200
+        },
+        speed: 500,
+        range: 20,
+        translation: 300,
+        center: false,
+        scatter: true
+      }
+    });
+  }
+
+  // Linear spread left (irregular)
+  fan10Click() {
+    this.setState({
+      fan: {
+        direction: 'left',
+        easing: 'ease-out',
+        origin: {
+          x: 50,
+          y: 200
+        },
+        speed: 500,
+        range: 20,
+        translation: 300,
+        center: false,
+        scatter: true
+      }
+    });
+  }
+
+  // Other 1
+  fanOther1Click() {
+    this.setState({
+      fan: {
+        direction: 'left',
+        easing: 'ease-out',
+        origin: {
+          x: 25,
+          y: 100
+        },
+        speed: 500,
+        range: 130,
+        center: false
+      }
+    });
+  }
+
+  // Other 2
+  fanOther2Click() {
+    this.setState({
+      fan: {
+        direction: 'left',
+        easing: 'ease-out',
+        origin: {
+          x: 50,
+          y: 90
+        },
+        speed: 500,
+        range: 360,
+        center: false
+      }
+    });
+  }
+
+  // Other 3
+  fanOther3Click() {
+    this.setState({
+      fan: {
+        direction: 'left',
+        easing: 'ease-out',
+        origin: {
+          x: 50,
+          y: 100
+        },
+        speed: 500,
+        range: 330,
+        center: true
+      }
+    });
+  }
+
+  // Other 4
+  fanOther4Click() {
+    this.setState({
+      fan: {
+        direction: 'right',
+        easing: 'ease-out',
+        origin: {
+          minX: 20,
+          maxX: 80,
+          y: 100
+        },
+        speed: 500,
+        range: 90,
+        translation: 60,
+        center: true,
+        scatter: true
+      }
+    });
+  }
+
+  closeClick() {
+    this.setState({
+      close: !this.state.close
+    });
+  }
+
+  lastClick() {
+    this.setState({
+      last: !this.state.last
+    });
+  }
+
+  nextClick() {
+    this.setState({
+      next: !this.state.next
+    });
+  }
+
   render() {
     return (
-      <BarajaJS id="baraja-el">
-        {cards.map(({imgSrc, title, details}) => {
-          return (
-            <React.Fragment>
-              <img src={imgSrc} alt={title} />
-              <h4>{title}</h4>
-              <p>{details}</p>
-            </React.Fragment>
-          );
-        })}
-      </BarajaJS>
+      <React.Fragment>
+        <nav className="actions">
+          <span id="nav-fan" onClick={() => this.fanClick()}>
+            Fan right
+          </span>
+
+          <span id="nav-fan2" onClick={() => this.fan2Click()}>
+            Fan left
+          </span>
+
+          <span id="nav-fan3" onClick={() => this.fan3Click()}>
+            Fan right (asym.)
+          </span>
+
+          <span id="nav-fan4" onClick={() => this.fan4Click()}>
+            Fan left (asym.)
+          </span>
+
+          <span id="nav-fan5" onClick={() => this.fan5Click()}>
+            Rotated spread (horizontal)
+          </span>
+
+          <span id="nav-fan6" onClick={() => this.fan6Click()}>
+            Rotated spread (vertical)
+          </span>
+
+          <span id="nav-fan7" onClick={() => this.fan7Click()}>
+            Linear spread right
+          </span>
+
+          <span id="nav-fan8" onClick={() => this.fan8Click()}>
+            Linear spread left
+          </span>
+
+          <span id="nav-fan9" onClick={() => this.fan9Click()}>
+            Linear spread right (irregular)
+          </span>
+
+          <span id="nav-fan10" onClick={() => this.fan10Click()}>
+            Linear spread left (irregular)
+          </span>
+
+          <span id="nav-fanOther1" onClick={() => this.fanOther1Click()}>
+            other
+          </span>
+
+          <span id="nav-fanOther2" onClick={() => this.fanOther2Click()}>
+            other
+          </span>
+
+          <span id="nav-fanOther3" onClick={() => this.fanOther3Click()}>
+            other
+          </span>
+
+          <span id="nav-fanOther4" onClick={() => this.fanOther4Click()}>
+            other...
+          </span>
+
+          <span id="add" onClick={() => this.addClick()}>
+            Add items
+          </span>
+        </nav>
+
+        <div className="baraja-demo">
+          <BarajaJS id="baraja-el" {...this.state}>
+            {cards.map(({imgSrc, title, details}, index) => {
+              return (
+                <React.Fragment key={index}>
+                  <img src={imgSrc} alt={title} />
+                  <h4>{title}</h4>
+                  <p>{details}</p>
+                </React.Fragment>
+              );
+            })}
+          </BarajaJS>
+        </div>
+
+        <nav className="actions light">
+          <span id="nav-prev" onClick={() => this.lastClick()}>
+            &lt;
+          </span>
+
+          <span id="nav-next" onClick={() => this.nextClick()}>
+            &gt;
+          </span>
+
+          <span id="close" onClick={() => this.closeClick()}>
+            close
+          </span>
+        </nav>
+      </React.Fragment>
     );
   }
 };

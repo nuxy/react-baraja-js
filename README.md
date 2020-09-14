@@ -1,4 +1,3 @@
-
 # React Baraja-JS [![npm version](https://badge.fury.io/js/react-baraja-js.svg)](https://badge.fury.io/js/react-baraja-js) [![](https://img.shields.io/npm/dm/react-baraja-js)](https://www.npmjs.com/package/react-baraja-js)
 
 ![Preview](https://raw.githubusercontent.com/nuxy/baraja-js/master/package.png)
@@ -23,14 +22,84 @@ Add to an existing [React](https://reactjs.org) project using [YARN](https://yar
 
 ```javascript
 import React    from 'react';
-import ReactDOM from 'react-dom';
 import BarajaJS from '../dist/react-baraja-js';
 
+const cards = [
+  {
+    imageSrc: 'path/to/image1.png',
+    title: 'card 1',
+    details: 'this is card 1'
+  },
+  {
+    imageSrc: 'path/to/image2.png',
+    title: 'card 2',
+    details: 'this is card 2'
+  },
+  {
+    imageSrc: 'path/to/image3.png',
+    title: 'card 3',
+    details: 'this is card 3'
+  },
+  {
+    imageSrc: 'path/to/image4.png',
+    title: 'card 4',
+    details: 'this is card 4'
+  },
 
+  // add more cards ...
+]
+
+export default class Demo extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      fan: {}
+    };
+  }
+
+  // Fan right
+  fanEvent() {
+    this.setState({
+      fan: {
+        direction: 'right',
+        easing: 'ease-out',
+        origin: {
+          x: 25,
+          y: 100
+        },
+        speed: 500,
+        range: 90,
+        center: true
+      }
+    });
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <BarajaJS fan={fan}>
+          {cards.map(({imageSrc, title, details}, index) => {
+            return (
+              <React.Fragment key={index}>
+                <img src={imageSrc} alt={title} />
+                <h4>{title}</h4>
+                <p>{details}</p>
+              </React.Fragment>
+            );
+          })}
+        </BarajaJS>
+
+        <button id="fan-button" onClick={() => this.fanEvent()}>Fan right</button>
+      </React.Fragment>
+    );
+  }
+};
 ```
 
 ## Documentation
 
+- [Methods](https://github.com/nuxy/baraja-js#methods)
 - [Fan options](https://github.com/nuxy/baraja-js#fan-options)
 
 ## Developers

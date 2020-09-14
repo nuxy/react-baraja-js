@@ -46,8 +46,8 @@ const cards = [
   },
   {
     imgSrc: 'https://nuxy.github.io/baraja-js/images/9.jpg',
-    title: 'Cherry Country',
-    details: 'Sint vinyl Austin street art odd future id trust fund, terry richardson cray.'
+    title: 'Lobster Maker',
+    details: 'Far deference cupidatat non proident escape, he could greatest mister uninspired.'
   },
   {
     imgSrc: 'https://nuxy.github.io/baraja-js/images/10.jpg',
@@ -56,13 +56,13 @@ const cards = [
   },
   {
     imgSrc: 'https://nuxy.github.io/baraja-js/images/11.jpg',
-    title: 'Coco Loko',
-    details: 'Total bicycle rights in blog four loko raw denim ex, helvetica sapiente odio placeat.'
+    title: 'Future Dynamo',
+    details: 'Delicacy omnis nice, well upright, would loral sed quia small dream.'
   },
   {
     imgSrc: 'https://nuxy.github.io/baraja-js/images/12.jpg',
-    title: 'Vermouth Land',
-    details: 'Velit chambray fugiat, enim aesthetic esse ullamco typewriter.'
+    title: 'Breaking Bad',
+    details: 'French it rain adipisci necessary textile war ullam corporis time.'
   }
 ];
 /* eslint-enable max-len */

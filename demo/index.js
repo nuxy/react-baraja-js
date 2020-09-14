@@ -17,7 +17,8 @@ const cards = [
   {
     imgSrc: 'https://nuxy.github.io/baraja-js/images/3.jpg',
     title: 'Electrodynamics',
-    details: 'Before they sold out PBR magna jean shorts non seitan ea. Dolor wolf pop-up.'
+    details: 'Before they sold out PBR magna jean shorts non seitan ea. Dolor wolf pop-up.',
+    addItems: true
   },
   {
     imgSrc: 'https://nuxy.github.io/baraja-js/images/4.jpg',
@@ -37,12 +38,14 @@ const cards = [
   {
     imgSrc: 'https://nuxy.github.io/baraja-js/images/7.jpg',
     title: 'Dark Honor',
-    details: 'Chillwave mustache pinterest, marfa seitan umami id farm-to-table iphone.'
+    details: 'Chillwave mustache pinterest, marfa seitan umami id farm-to-table iphone.',
+    addItems: true
   },
   {
     imgSrc: 'https://nuxy.github.io/baraja-js/images/8.jpg',
     title: 'Nested Happiness',
-    details: 'Minim post-ironic banksy american apparel iphone wayfarers.'
+    details: 'Minim post-ironic banksy american apparel iphone wayfarers.',
+    addItems: true
   },
   {
     imgSrc: 'https://nuxy.github.io/baraja-js/images/9.jpg',
@@ -327,6 +330,26 @@ class Demo extends React.Component {
         center: true,
         scatter: true
       }
+    });
+  }
+
+  addClick() {
+    let html = '';
+
+    cards.forEach(({imgSrc, title, details, addItems}) => {
+      if (addItems) {
+        html += `
+          <li>
+            <img src=${imgSrc} alt=${title} />
+            <h4>${title}</h4>
+            <p>${details}</p>
+          </li>
+        `;
+      }
+    });
+
+    this.setState({
+      add: html
     });
   }
 

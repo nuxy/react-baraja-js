@@ -5,65 +5,65 @@ import BarajaJS from '../dist/react-baraja';
 /* eslint-disable max-len */
 const cards = [
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/1.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/1.jpg',
     title: 'Coco Loko',
     details: 'Total bicycle rights in blog four loko raw denim ex, helvetica sapiente odio placeat.'
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/2.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/2.jpg',
     title: 'Vermouth Land',
     details: 'Velit chambray fugiat, enim aesthetic esse ullamco typewriter.'
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/3.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/3.jpg',
     title: 'Electrodynamics',
     details: 'Before they sold out PBR magna jean shorts non seitan ea. Dolor wolf pop-up.',
     addItems: true
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/4.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/4.jpg',
     title: 'Retinal Bliss',
     details: 'Locavore vero ad, before they sold out food truck bushwick helvetica.'
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/5.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/5.jpg',
     title: 'Disco Fever',
     details: 'Cillum laboris consequat, qui elit retro next level skateboard freegan hella.'
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/6.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/6.jpg',
     title: 'Serenity',
     details: 'Truffaut wes anderson hoodie 3 wolf moon labore, fugiat lomo iphone eiusmod vegan.'
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/7.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/7.jpg',
     title: 'Dark Honor',
     details: 'Chillwave mustache pinterest, marfa seitan umami id farm-to-table iphone.',
     addItems: true
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/8.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/8.jpg',
     title: 'Nested Happiness',
     details: 'Minim post-ironic banksy american apparel iphone wayfarers.',
     addItems: true
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/9.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/9.jpg',
     title: 'Lobster Maker',
     details: 'Far deference cupidatat non proident escape, he could greatest mister uninspired.'
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/10.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/10.jpg',
     title: 'Cherry Country',
     details: 'Sint vinyl Austin street art odd future id trust fund, terry richardson cray.'
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/11.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/11.jpg',
     title: 'Future Dynamo',
     details: 'Delicacy omnis nice, well upright, would loral sed quia small dream.'
   },
   {
-    imgSrc: 'https://nuxy.github.io/baraja-js/images/12.jpg',
+    imageSrc: 'https://nuxy.github.io/baraja-js/images/12.jpg',
     title: 'Breaking Bad',
     details: 'French it rain adipisci necessary textile war ullam corporis time.'
   }
@@ -84,7 +84,7 @@ class Demo extends React.Component {
   }
 
   // Fan right
-  fanClick() {
+  fanEvent() {
     this.setState({
       fan: {
         direction: 'right',
@@ -101,7 +101,7 @@ class Demo extends React.Component {
   }
 
   // Fan left
-  fan2Click() {
+  fan2Event() {
     this.setState({
       fan: {
         direction: 'left',
@@ -118,7 +118,7 @@ class Demo extends React.Component {
   }
 
   // Fan right (asym.)
-  fan3Click() {
+  fan3Event() {
     this.setState({
       fan: {
         direction: 'right',
@@ -137,7 +137,7 @@ class Demo extends React.Component {
   }
 
   // Fan left (asym.)
-  fan4Click() {
+  fan4Event() {
     this.setState({
       fan: {
         direction: 'left',
@@ -156,7 +156,7 @@ class Demo extends React.Component {
   }
 
   // Rotated spread (horizontal)
-  fan5Click() {
+  fan5Event() {
     this.setState({
       fan: {
         direction: 'right',
@@ -172,7 +172,7 @@ class Demo extends React.Component {
   }
 
   // Rotated spread (vertical)
-  fan6Click() {
+  fan6Event() {
     this.setState({
       fan: {
         direction: 'left',
@@ -189,7 +189,7 @@ class Demo extends React.Component {
   }
 
   // Linear spread right
-  fan7Click() {
+  fan7Event() {
     this.setState({
       fan: {
         direction: 'right',
@@ -207,7 +207,7 @@ class Demo extends React.Component {
   }
 
   // Linear spread left
-  fan8Click() {
+  fan8Event() {
     this.setState({
       fan: {
         direction: 'left',
@@ -225,7 +225,7 @@ class Demo extends React.Component {
   }
 
   // Linear spread right (irregular)
-  fan9Click() {
+  fan9Event() {
     this.setState({
       fan: {
         direction: 'right',
@@ -244,7 +244,7 @@ class Demo extends React.Component {
   }
 
   // Linear spread left (irregular)
-  fan10Click() {
+  fan10Event() {
     this.setState({
       fan: {
         direction: 'left',
@@ -263,7 +263,7 @@ class Demo extends React.Component {
   }
 
   // Other 1
-  fanOther1Click() {
+  fanOther1Event() {
     this.setState({
       fan: {
         direction: 'left',
@@ -280,7 +280,7 @@ class Demo extends React.Component {
   }
 
   // Other 2
-  fanOther2Click() {
+  fanOther2Event() {
     this.setState({
       fan: {
         direction: 'left',
@@ -297,7 +297,7 @@ class Demo extends React.Component {
   }
 
   // Other 3
-  fanOther3Click() {
+  fanOther3Event() {
     this.setState({
       fan: {
         direction: 'left',
@@ -314,7 +314,7 @@ class Demo extends React.Component {
   }
 
   // Other 4
-  fanOther4Click() {
+  fanOther4Event() {
     this.setState({
       fan: {
         direction: 'right',
@@ -333,14 +333,14 @@ class Demo extends React.Component {
     });
   }
 
-  addClick() {
+  addEvent() {
     let html = '';
 
-    cards.forEach(({imgSrc, title, details, addItems}) => {
+    cards.forEach(({imageSrc, title, details, addItems}) => {
       if (addItems) {
         html += `
           <li>
-            <img src=${imgSrc} alt=${title} />
+            <img src=${imageSrc} alt=${title} />
             <h4>${title}</h4>
             <p>${details}</p>
           </li>
@@ -353,19 +353,19 @@ class Demo extends React.Component {
     });
   }
 
-  closeClick() {
+  closeEvent() {
     this.setState({
       close: !this.state.close
     });
   }
 
-  lastClick() {
+  lastEvent() {
     this.setState({
       last: !this.state.last
     });
   }
 
-  nextClick() {
+  nextEvent() {
     this.setState({
       next: !this.state.next
     });
@@ -375,73 +375,73 @@ class Demo extends React.Component {
     return (
       <React.Fragment>
         <nav className="actions">
-          <span id="nav-fan" onClick={() => this.fanClick()}>
+          <span id="nav-fan" onClick={() => this.fanEvent()}>
             Fan right
           </span>
 
-          <span id="nav-fan2" onClick={() => this.fan2Click()}>
+          <span id="nav-fan2" onClick={() => this.fan2Event()}>
             Fan left
           </span>
 
-          <span id="nav-fan3" onClick={() => this.fan3Click()}>
+          <span id="nav-fan3" onClick={() => this.fan3Event()}>
             Fan right (asym.)
           </span>
 
-          <span id="nav-fan4" onClick={() => this.fan4Click()}>
+          <span id="nav-fan4" onClick={() => this.fan4Event()}>
             Fan left (asym.)
           </span>
 
-          <span id="nav-fan5" onClick={() => this.fan5Click()}>
+          <span id="nav-fan5" onClick={() => this.fan5Event()}>
             Rotated spread (horizontal)
           </span>
 
-          <span id="nav-fan6" onClick={() => this.fan6Click()}>
+          <span id="nav-fan6" onClick={() => this.fan6Event()}>
             Rotated spread (vertical)
           </span>
 
-          <span id="nav-fan7" onClick={() => this.fan7Click()}>
+          <span id="nav-fan7" onClick={() => this.fan7Event()}>
             Linear spread right
           </span>
 
-          <span id="nav-fan8" onClick={() => this.fan8Click()}>
+          <span id="nav-fan8" onClick={() => this.fan8Event()}>
             Linear spread left
           </span>
 
-          <span id="nav-fan9" onClick={() => this.fan9Click()}>
+          <span id="nav-fan9" onClick={() => this.fan9Event()}>
             Linear spread right (irregular)
           </span>
 
-          <span id="nav-fan10" onClick={() => this.fan10Click()}>
+          <span id="nav-fan10" onClick={() => this.fan10Event()}>
             Linear spread left (irregular)
           </span>
 
-          <span id="nav-fanOther1" onClick={() => this.fanOther1Click()}>
+          <span id="nav-fanOther1" onClick={() => this.fanOther1Event()}>
             other
           </span>
 
-          <span id="nav-fanOther2" onClick={() => this.fanOther2Click()}>
+          <span id="nav-fanOther2" onClick={() => this.fanOther2Event()}>
             other
           </span>
 
-          <span id="nav-fanOther3" onClick={() => this.fanOther3Click()}>
+          <span id="nav-fanOther3" onClick={() => this.fanOther3Event()}>
             other
           </span>
 
-          <span id="nav-fanOther4" onClick={() => this.fanOther4Click()}>
+          <span id="nav-fanOther4" onClick={() => this.fanOther4Event()}>
             other...
           </span>
 
-          <span id="add" onClick={() => this.addClick()}>
+          <span id="add" onClick={() => this.addEvent()}>
             Add items
           </span>
         </nav>
 
         <div className="baraja-demo">
           <BarajaJS id="baraja-el" {...this.state}>
-            {cards.map(({imgSrc, title, details}, index) => {
+            {cards.map(({imageSrc, title, details}, index) => {
               return (
                 <React.Fragment key={index}>
-                  <img src={imgSrc} alt={title} />
+                  <img src={imageSrc} alt={title} />
                   <h4>{title}</h4>
                   <p>{details}</p>
                 </React.Fragment>
@@ -451,15 +451,15 @@ class Demo extends React.Component {
         </div>
 
         <nav className="actions light">
-          <span id="nav-prev" onClick={() => this.lastClick()}>
+          <span id="nav-prev" onClick={() => this.lastEvent()}>
             &lt;
           </span>
 
-          <span id="nav-next" onClick={() => this.nextClick()}>
+          <span id="nav-next" onClick={() => this.nextEvent()}>
             &gt;
           </span>
 
-          <span id="close" onClick={() => this.closeClick()}>
+          <span id="close" onClick={() => this.closeEvent()}>
             close
           </span>
         </nav>

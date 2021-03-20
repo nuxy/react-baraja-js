@@ -101,9 +101,9 @@ export default class Demo extends React.Component {
 
 | Name     | Type     | Description              |
 |----------|----------|--------------------------|
-| id       | String   | Default: `baraja-js`     |
+| id       | String   | Default `baraja-js`      |
 | options  | Object   | Override animation [defaults](https://github.com/nuxy/baraja-js#global-options). |
-| add      | String   | Card `<li>` HTML block.  |
+| add      | String   | Card item [HTML markup](https://github.com/nuxy/baraja-js#html-markup). |
 | fan      | Object   | Configure [fan options](https://github.com/nuxy/baraja-js#fan-options). |
 | close    | Boolean  | Close the deck if `true` |
 | last     | Boolean  | Show last card if `true` |

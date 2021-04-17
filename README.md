@@ -22,7 +22,7 @@ Add to an existing [React](https://reactjs.org) project using [YARN](https://yar
 
 ```javascript
 import React    from 'react';
-import BarajaJS from '../dist/react-baraja-js';
+import BarajaJS from 'react-baraja-js'; // or '../dist/react-baraja-js';
 
 const cards = [
   {

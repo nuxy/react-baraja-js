@@ -56,7 +56,7 @@ class BarajaJS extends React.Component {
       </ul>
     );
   }
-};
+}
 
 BarajaJS.defaultProps = {
   id: 'baraja-js',

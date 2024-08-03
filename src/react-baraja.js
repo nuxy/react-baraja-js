@@ -2,7 +2,7 @@
  *  React BarajaJS
  *  A plugin for spreading items in a card-like fashion.
  *
- *  Copyright 2020-2023, Marc S. Brooks (https://mbrooks.info)
+ *  Copyright 2020-2024, Marc S. Brooks (https://mbrooks.info)
  *  Licensed under the MIT license:
  *  http://www.opensource.org/licenses/mit-license.php
  */

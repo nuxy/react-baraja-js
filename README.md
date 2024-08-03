@@ -1,4 +1,6 @@
-# React Baraja-JS [![npm version](https://badge.fury.io/js/react-baraja-js.svg)](https://badge.fury.io/js/react-baraja-js) [![](https://img.shields.io/npm/dm/react-baraja-js)](https://www.npmjs.com/package/react-baraja-js)
+# React Baraja-JS
+
+[![npm version](https://badge.fury.io/js/react-baraja-js.svg)](https://badge.fury.io/js/react-baraja-js) [![](https://img.shields.io/npm/dm/react-baraja-js)](https://www.npmjs.com/package/react-baraja-js) [![Install size](https://packagephobia.com/badge?p=react-baraja-js)](https://packagephobia.com/result?p=react-baraja-js) [![](https://img.shields.io/github/v/release/nuxy/react-baraja-js)](https://github.com/nuxy/react-baraja-js/releases)
 
 ![Preview](https://raw.githubusercontent.com/nuxy/baraja-js/master/package.gif)
 

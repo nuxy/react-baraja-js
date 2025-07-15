@@ -48,12 +48,20 @@ class BarajaJS extends React.Component {
   }
 
   render() {
-    return (
-      <ul id={this.props.id} className="baraja-container" ref="wrapper">
-        {this.props.children.map((Child, index) => {
-          return <li key={index}>{Child}</li>;
-        })}
-      </ul>
+    return React.createElement(
+      'ul',
+      {
+        className: 'baraja-container',
+        ref: 'wrapper',
+        id: this.props.id
+      },
+      this.props.children.map((Child, index) => {
+        return React.createElement(
+          'li',
+          {key: index},
+          Child
+        )
+      })
     );
   }
 }

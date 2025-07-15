@@ -372,7 +372,7 @@ class Demo extends React.Component {
   }
 
   render() {
-    return React.createElement(
+    return (
       <React.Fragment>
         <nav className="actions">
           <span id="nav-fan" onClick={() => this.fanEvent()}>

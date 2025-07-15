@@ -2,7 +2,7 @@
  *  React BarajaJS
  *  A plugin for spreading items in a card-like fashion.
  *
- *  Copyright 2020-2025, Marc S. Brooks (https://mbrooks.info)
+ *  Copyright 2020-2024, Marc S. Brooks (https://mbrooks.info)
  *  Licensed under the MIT license:
  *  http://www.opensource.org/licenses/mit-license.php
  */
@@ -48,7 +48,7 @@ class BarajaJS extends React.Component {
   }
 
   render() {
-    return React.createElement(
+    return (
       <ul id={this.props.id} className="baraja-container" ref="wrapper">
         {this.props.children.map((Child, index) => {
           return <li key={index}>{Child}</li>;

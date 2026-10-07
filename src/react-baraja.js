@@ -60,7 +60,7 @@ class BarajaJS extends React.Component {
           'li',
           {key: index},
           Child
-        )
+        );
       })
     );
   }
